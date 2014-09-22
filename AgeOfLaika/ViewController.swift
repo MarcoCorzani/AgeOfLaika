@@ -46,46 +46,37 @@ class ViewController: UIViewController {
     @IBAction func JenachDemButton(sender: UIBarButtonItem) {
    
     var doubleYearsInput = Double((insertYearsTextField.text as NSString).doubleValue)
+    
     var ausgabeDouble:Double
         
+    var factor:Double = doubleYearsInput - 2
         
-        var factor:Double = doubleYearsInput - 2
-    
-    
-        
-        if doubleYearsInput <= 2 {
-        
-            ausgabeDouble = doubleYearsInput * 10.5
-        
-            outputDogYears.hidden = false
+       
+        if  doubleYearsInput > 2 {
             
-            outputDogYears.text = "\(ausgabeDouble)" + " Hundejahe"
-        
-            insertYearsTextField.resignFirstResponder()
-        
-        
-        }
-            
-        else if doubleYearsInput > 2 {
-        
             ausgabeDouble = (2 * 10.5) + (factor * 4)
         
-            outputDogYears.hidden = false
-            
-            outputDogYears.text = "\(ausgabeDouble)" + " Hundejahre"
-        
-            insertYearsTextField.resignFirstResponder()
-        
         }
             
+        else {
+            
+             ausgabeDouble = doubleYearsInput * 10.5
+        
+            
+            
+        }
+            
+        outputDogYears.hidden = false
        
+        outputDogYears.text = "\(ausgabeDouble)" + " Hundejahre"
+        
+        insertYearsTextField.resignFirstResponder()
+
     
     
     }
     
-    //Testkommentar um Github zu überprüfen
-    //Testkommentar um Github zu überprüfen
-    //Testkommentar um Github zu überprüfen
+   
     
 
     
@@ -99,3 +90,5 @@ class ViewController: UIViewController {
 
 }
 
+    
+   
